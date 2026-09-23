@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Delivery Baterías Motos — Baterías de moto a domicilio</title>
-<meta name="description" content="Baterías de moto desde $65.000 a domicilio en menos de 1 hora. Instalación sin cargo en 15 minutos. Pedí por WhatsApp.">
+<title>Delivery Baterías Motos — Baterías de moto y auto a domicilio</title>
+<meta name="description" content="Baterías de moto y auto desde $65.000 a domicilio en menos de 1 hora. Instalación sin cargo en 15 minutos. Pedí por WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@ nav.main .btn{min-height:48px; padding:0 22px; font-size:16px}
 .hero{padding-block:clamp(40px, 7vw, 96px) clamp(48px, 7vw, 110px); display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(32px, 5vw, 72px); align-items:center}
 .kicker{display:flex; align-items:center; gap:10px; font-size:14px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--accent); margin:0 0 22px}
 .kicker::before{content:""; width:10px; height:10px; border-radius:50%; background:var(--accent)}
-.hero h1{font-size:clamp(50px, 5.8vw, 88px)}
+.hero h1{font-size:clamp(46px, 5.3vw, 82px)}
 .hero-title .w{display:inline-block; transform:skewX(-9deg); animation:zoom-in .5s cubic-bezier(.16,1,.3,1) both; animation-delay:calc(var(--i) * 55ms + 80ms)}
 @keyframes zoom-in{
   0%{opacity:0; transform:translateX(-90px) skewX(-20deg); filter:blur(8px)}
@@ -65,9 +65,15 @@ nav.main .btn{min-height:48px; padding:0 22px; font-size:16px}
   80%{transform:translateX(6px) skewX(-6deg)}
   100%{opacity:1; transform:skewX(-9deg); filter:none}
 }
-.hero-title::before{content:""; display:block; width:120px; height:10px; margin-bottom:22px; background:repeating-linear-gradient(90deg, var(--accent) 0 34px, transparent 34px 44px); transform:skewX(-20deg); animation:streak .7s cubic-bezier(.16,1,.3,1) both}
-@keyframes streak{from{transform:translateX(-140px) skewX(-20deg); opacity:0} to{transform:skewX(-20deg); opacity:1}}
-@media (prefers-reduced-motion:reduce){.hero-title .w,.hero-title::before{animation:none}}
+.speed-mark{display:block; width:150px; height:30px; margin-bottom:22px}
+.speed-mark polygon{fill:var(--accent); animation:chev .55s cubic-bezier(.16,1,.3,1) both; animation-delay:calc(var(--k) * 80ms)}
+@keyframes chev{from{opacity:0; transform:translateX(-30px)}}
+.speed-title .w{display:inline-block; transform:skewX(-9deg)}
+.speed-title .hl{color:var(--accent)}
+.js .speed-block .w, .js .speed-block .speed-mark polygon{animation-play-state:paused}
+.js .speed-block .w{animation:zoom-in .5s cubic-bezier(.16,1,.3,1) both; animation-delay:calc(var(--i) * 55ms + 120ms); animation-play-state:paused}
+.js .speed-block.in .w, .js .speed-block.in .speed-mark polygon{animation-play-state:running}
+@media (prefers-reduced-motion:reduce){.hero-title .w,.speed-mark polygon,.js .speed-block .w{animation:none}}
 .hero-title .hl{color:var(--accent); position:relative}
 
 .hero p.lead{font-size:clamp(17px, 1.5vw, 21px); color:var(--muted); max-width:34em; margin:26px 0 32px}
@@ -319,10 +325,11 @@ footer.bottom a:hover{color:var(--text)}
   <div class="wrap">
     <section class="hero">
       <div>
-        <h1 class="display hero-title" aria-label="Baterías a domicilio desde $65.000 en menos de 1 hora."><span aria-hidden="true"><span class="w" style="--i:0">Baterías</span> <span class="w" style="--i:1">a</span> <span class="w" style="--i:2">domicilio</span> <span class="w" style="--i:3">desde</span> <span class="w" style="--i:4">$65.000</span> <span class="w hl" style="--i:5; --c:0">en</span> <span class="w hl" style="--i:6; --c:1">menos</span> <span class="w hl" style="--i:7; --c:2">de</span> <span class="w hl" style="--i:8; --c:3">1</span> <span class="w hl" style="--i:9; --c:4">hora.</span></span></h1>
+        <svg class="speed-mark" viewBox="0 0 150 30" aria-hidden="true"><polygon style="--k:0" fill-opacity="0.22" points="0,0 14,0 30,15 14,30 0,30 16,15"/><polygon style="--k:1" fill-opacity="0.45" points="38,0 52,0 68,15 52,30 38,30 54,15"/><polygon style="--k:2" fill-opacity="0.72" points="76,0 90,0 106,15 90,30 76,30 92,15"/><polygon style="--k:3" fill-opacity="1" points="114,0 128,0 144,15 128,30 114,30 130,15"/></svg>
+        <h1 class="display hero-title" aria-label="Baterías de moto y auto desde $65.000 en menos de 1 hora."><span aria-hidden="true"><span class="w" style="--i:0">Baterías</span> <span class="w" style="--i:1">de</span> <span class="w" style="--i:2">moto</span> <span class="w" style="--i:3">y</span> <span class="w" style="--i:4">auto</span> <span class="w" style="--i:5">desde</span> <span class="w" style="--i:6">$65.000</span> <span class="w hl" style="--i:7">en</span> <span class="w hl" style="--i:8">menos</span> <span class="w hl" style="--i:9">de</span> <span class="w hl" style="--i:10">1</span> <span class="w hl" style="--i:11">hora.</span></span></h1>
         <p class="lead">Instalación sin cargo en 15 minutos, donde estés. Garantía oficial de todas las marcas.</p>
         <div class="hero-ctas">
-          <a href="#" class="btn btn-accent js-wa"><svg class="i" width="20" height="20"><use href="#i-chat"/></svg>Pedir por WhatsApp</a>
+          <a href="#" class="btn btn-accent js-wa"><svg class="i" width="20" height="20"><use href="#i-chat"/></svg>Cotizar batería</a>
           <a href="#precios" class="btn btn-ghost">Ver precios <svg class="i" width="18" height="18"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
@@ -370,7 +377,10 @@ footer.bottom a:hover{color:var(--text)}
 
     <section class="block" id="precios">
       <div class="sec-head">
-        <h2 class="display">Envío + colocación<br>a domicilio sin cargo.</h2>
+        <div class="speed-block">
+          <svg class="speed-mark" viewBox="0 0 150 30" aria-hidden="true"><polygon style="--k:0" fill-opacity="0.22" points="0,0 14,0 30,15 14,30 0,30 16,15"/><polygon style="--k:1" fill-opacity="0.45" points="38,0 52,0 68,15 52,30 38,30 54,15"/><polygon style="--k:2" fill-opacity="0.72" points="76,0 90,0 106,15 90,30 76,30 92,15"/><polygon style="--k:3" fill-opacity="1" points="114,0 128,0 144,15 128,30 114,30 130,15"/></svg>
+          <h2 class="display speed-title" aria-label="Envío + colocación a domicilio sin cargo."><span aria-hidden="true"><span class="w" style="--i:0">Envío</span> <span class="w" style="--i:1">+</span> <span class="w" style="--i:2">colocación</span><br><span class="w" style="--i:3">a</span> <span class="w" style="--i:4">domicilio</span> <span class="w hl" style="--i:5">sin</span> <span class="w hl" style="--i:6">cargo.</span></span></h2>
+        </div>
       </div>
       <div class="prices">
         <div class="card price">
@@ -467,21 +477,6 @@ footer.bottom a:hover{color:var(--text)}
       </div>
     </section>
 
-    <section class="block" id="zonas">
-      <div class="zones">
-        <div class="zone-panel">
-          <div class="zone-big display">CABA<br>+ GBA</div>
-          <div class="hours"><svg class="i" width="24" height="24"><use href="#i-clock"/></svg>Envío y colocación las 24 horas</div>
-        </div>
-        <div class="info">
-          <h2 class="display h2">Zona de<br>cobertura</h2>
-          <p>Realizamos envío y colocación de baterías las 24 horas.</p>
-          <p>Nuestros técnicos revisan el alternador y el sistema eléctrico de tu moto o vehículo con el equipamiento necesario.</p>
-          <p>Retiramos la batería usada, instalamos una nueva y verificamos que todo funcione correctamente.</p>
-        </div>
-      </div>
-    </section>
-
     <section class="block" id="faq">
       <div class="faq-wrap">
         <h2 class="display h2">Preguntas frecuentes</h2>
@@ -550,6 +545,14 @@ footer.bottom a:hover{color:var(--text)}
     const stop=()=>{clearInterval(timer); timer=null;};
     track.addEventListener('pointerdown',stop); track.addEventListener('touchstart',stop,{passive:true});
     start();
+  })();
+  // Animación de títulos al aparecer
+  document.documentElement.classList.add('js');
+  (function(){
+    const els=document.querySelectorAll('.speed-block');
+    if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in')); return;}
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}}),{threshold:.4});
+    els.forEach(e=>io.observe(e));
   })();
 </script>
 </body>
