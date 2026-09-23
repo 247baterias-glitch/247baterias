@@ -202,7 +202,7 @@ footer.bottom a{text-decoration:none}
 footer.bottom a:hover{color:var(--text)}
 
 /* Sticky WhatsApp bar (mobile) */
-.sticky-wa{display:none}
+.sticky-wa{display:flex; position:fixed; right:calc(24px + env(safe-area-inset-right, 0px)); bottom:calc(24px + env(safe-area-inset-bottom, 0px)); z-index:30; min-height:58px; padding:0 26px; font-size:16px; box-shadow:0 12px 32px rgba(0,0,0,.5)}
 
 /* ---------- Tablet ---------- */
 @media (max-width:1080px){
